@@ -68,14 +68,14 @@ const DistributionScreen = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(agentContacts).map(([agentId, data]) => (
-              <div key={agentId} className="bg-white p-6 rounded-lg shadow-md">
+              <div key={agentId} className="bg-neutral-800 p-6 rounded-lg shadow-md">
                 <h2 className="text-xl font-semibold mb-4">{data.name}</h2>
                 <p className="text-gray-600 mb-4">
                   Assigned Contacts: <span className="font-bold">{data.contacts.length}</span>
                 </p>
-                <div className="overflow-y-auto max-h-60">
+                <div className="overflow-y-auto max-h-60 rounded-2xl">
                   <table className="min-w-full">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-gray-600">
                       <tr>
                         <th className="py-2 px-3 text-left text-sm">Name</th>
                         <th className="py-2 px-3 text-left text-sm">Phone</th>
@@ -84,7 +84,7 @@ const DistributionScreen = () => {
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       {data.contacts.map((contact) => (
-                        <tr key={contact._id} className="hover:bg-gray-50">
+                        <tr key={contact._id} className="hover:bg-neutral-700 hover:text-white">
                           <td className="py-2 px-3 text-sm">{contact.firstName}</td>
                           <td className="py-2 px-3 text-sm">{contact.phone}</td>
                           <td className="py-2 px-3 text-sm">{contact.notes}</td>
