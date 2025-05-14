@@ -2,6 +2,17 @@
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application for managing agents and distributing contacts among them.
 
+## Demo Video
+
+[![Agent Management System Demo](https://img.shields.io/badge/Watch-Demo%20Video-red)](https://drive.google.com/file/d/1Xa6rEJAnESLlbGo8AFOncVff_GVB1aHA/view?usp=drive_link)
+
+Check out the [demo video](https://drive.google.com/file/d/1Xa6rEJAnESLlbGo8AFOncVff_GVB1aHA/view?usp=drive_link) to see the Agent Management System in action. The video showcases the key features and functionality of the application, including:
+
+- User authentication and registration
+- Agent management (adding, editing, viewing agents)
+- CSV file upload and contact distribution
+- Viewing distribution results
+
 ## Features
 
 1. **User Authentication**
@@ -84,3 +95,45 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for managing ag
 - POST /api/contacts/upload - Upload and distribute contacts
 - GET /api/contacts/agent/:agentId - Get contacts for a specific agent
 - GET /api/contacts/batch/:batchId - Get contacts by batch ID
+
+## Project Structure
+
+```
+mern-agent-app/
+├── Backend/                # Node.js & Express backend
+│   ├── config/             # Configuration files
+│   ├── controllers/        # Request handlers
+│   ├── middleware/         # Custom middleware
+│   ├── models/             # Mongoose models
+│   ├── routes/             # API routes
+│   ├── uploads/            # Uploaded files (temporary)
+│   ├── .env                # Environment variables
+│   ├── package.json        # Backend dependencies
+│   └── server.js           # Entry point
+│
+├── Frontend/               # React & Vite frontend
+│   ├── public/             # Static assets
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── redux/          # Redux state management
+│   │   ├── screens/        # Page components
+│   │   ├── utils/          # Utility functions
+│   │   ├── App.jsx         # Main component
+│   │   ├── index.css       # Global styles
+│   │   └── main.jsx        # Entry point
+│   ├── .env                # Environment variables
+│   ├── index.html          # HTML template
+│   ├── package.json        # Frontend dependencies
+│   └── vite.config.js      # Vite configuration
+│
+└── README.md               # Project documentation
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgments
+
+- Thanks to all the open-source libraries that made this project possible
+- Special thanks to the MERN stack community for their excellent documentation and resources
